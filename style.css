@@ -151,42 +151,41 @@
       margin-top: 80px;
       padding: 25px 30px;
       margin-left: 240px;
-      max-width: 1100px;
+      max-width: 100wh;
+      overflow: hidden;
     }
 
    /* ================= TOPBAR FIX ================= */
 .topbar {
-  border-radius: 20px;
-  margin-top: 23px;
   position: fixed;
-  top: 0;
-  left: 270px; /* sesuaikan sidebar */
-  right: 215px;
+  top: 10px;
+  
+  /* 1. Gunakan margin/padding container atau kalkulasi otomatis */
+  left: 270px; /* Jarak dari kiri: Lebar sidebar + celah sedikit */
+  right: 20px; /* Jarak dari kanan agar tetap simetris */
+  
+  /* 2. Jangan gunakan width: fixed! Biarkan left & right yang bekerja */
   height: 70px;
+  
+  /* 3. Membuat sudut melengkung */
+  border-radius: 15px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 0 25px;
 
-  /* 🔥 warna sesuai tema kamu */
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.15),
-    rgba(139, 92, 246, 0.15)
-  );
-
+  /* Gaya Visual */
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   color: #e2e8f0;
-
   z-index: 1000;
+  
+  /* 4. Transisi halus saat resize atau zoom */
+  transition: all 0.3s ease;
 }
     .topbar h1 {
       font-size: 22px;
@@ -217,7 +216,10 @@
     .sidebar-overlay.active { display: block; }
 
     /* ================= CONTENT ================= */
-    .content { margin-top: 5px; }
+    .content { 
+      margin-top: 5px; 
+      width: 100%;
+    }
 
     /* ================= CARD ================= */
     .card {

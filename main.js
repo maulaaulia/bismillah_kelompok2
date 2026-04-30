@@ -33,7 +33,7 @@
     const lastTask = kelarIn.length > 0 ? kelarIn[kelarIn.length - 1] : null;
 
     content.innerHTML = `
-      <div class="card big" style="text-align:center; padding:32px 20px;">
+      <div class="card big" style="text-align:center; padding:32px 20px; width:screen">
         <div style="font-size:52px; margin-bottom:12px;">⚡</div>
         <h2 style="margin:0 0 8px; color:#e0e7ff;">Selamat Datang! ✨</h2>
         <p style="color:#94a3b8; margin-bottom:28px;">Siap menyelesaikan tugasmu hari ini dengan sistem LIFO?</p>
