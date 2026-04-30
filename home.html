@@ -2,47 +2,74 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelar-In App</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+<div class="piano-bg"></div>
+
+<!-- Mobile sidebar overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
 
 <div id="app">
 
-  <aside>
-    <h2 class="logo">Kelar-In</h2>
-
-    <nav>
-      <button class="nav-btn active" onclick="setActive(this); showHome()">🏠 Home</button>
-      <button class="nav-btn" onclick="setActive(this); showDashboard()">📊 Dashboard</button>
-      <button class="nav-btn" onclick="setActive(this); showTasks()">📋 Tugas</button>
-      <button class="nav-btn" onclick="setActive(this); showAdd()">➕ Tambah</button>
-    </nav>
-
-    <div class="bottom">
-      <button class="logout" onclick="logout()">🚪 Logout</button>
+  <aside id="sidebar">
+    <div>
+      <h2 class="logo">⚡ Kelar-In</h2>
+      <nav>
+        <button class="nav-btn active" onclick="setActive(this); showHome(); closeSidebar()">
+          <img src="icon/home.png" class="nav-icon" onerror="this.style.display='none'"> Home
+        </button>
+        <button class="nav-btn" onclick="setActive(this); showDashboard(); closeSidebar()">
+          <img src="icon/dashboard.png" class="nav-icon" onerror="this.style.display='none'"> Dashboard
+        </button>
+        <button class="nav-btn" onclick="setActive(this); showTasks(); closeSidebar()">
+          <img src="icon/task.png" class="nav-icon" onerror="this.style.display='none'"> Tugas
+        </button>
+        <button class="nav-btn" onclick="setActive(this); showAdd(); closeSidebar()">
+          <img src="icon/tambah.png" class="nav-icon" onerror="this.style.display='none'"> Tambah
+        </button>
+        <button class="nav-btn" onclick="setActive(this); showCalendar(); closeSidebar()">
+          <img src="icon/calendar.png" class="nav-icon" onerror="this.style.display='none'"> Kalender
+        </button>
+        <button class="nav-btn" onclick="setActive(this); showStats(); closeSidebar()">
+          <img src="icon/stats.png" class="nav-icon" onerror="this.style.display='none'"> Statistik
+        </button>
+      </nav>
+    </div>
+    <div class="bottom" style="font-size:12px; color:#475569; text-align:center;">
+      Kelar-In v2.0
     </div>
   </aside>
 
   <main>
-
     <div class="topbar">
-      <h1 id="pageTitle">Home</h1>
-      <div class="user" id="userName">👋 Hi, User</div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button class="hamburger" onclick="openSidebar()">☰</button>
+        <h1 id="pageTitle">Home</h1>
+      </div>
+      <div style="background:rgba(255,255,255,0.08); padding:8px 15px; border-radius:12px; font-size:14px; border:1px solid rgba(255,255,255,0.1);">
+        ⚡ Kelar-In
+      </div>
     </div>
 
-    <div class="content"></div>
-
+    <div class="content" id="mainContent"></div>
   </main>
 
 </div>
 
-<script src="main.js"></script>
+<!-- MODAL POPUP -->
+<div id="popupModal" class="modal">
+  <div class="modal-content">
+    <h3 id="popupText"></h3>
+    <p id="popupDesc"></p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
 
 </body>
-
-<body class="home"></body>
+<script src="main.js"></script>
 </html>
