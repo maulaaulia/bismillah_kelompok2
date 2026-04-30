@@ -241,8 +241,12 @@ main {
 
 /* ================= CONTENT ================= */
 .content {
-  width: 100%;
-  max-width: 1150px;
+    max-width: 1000px; /* Batasi lebar maksimal agar tidak melebar di layar besar */
+    margin: 0 auto;    /* Membuat konten otomatis berada di tengah secara horizontal */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Memastikan isi di dalamnya (seperti banner kucing) juga di tengah */
 }
 
 /* ================= CARD ================= */
