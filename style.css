@@ -210,18 +210,11 @@ nav {
 /* ================= MAIN ================= */
 main {
   flex: 1;
-  margin-left: 280px; /* Ditambah dikit biar ada gap dari sidebar */
-  padding: 40px 5% 60px 5%; /* Menggunakan % agar fleksibel di layar tanggung */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 25px;
 }
 
 /* ================= TOPBAR ================= */
 .topbar {
-  width: 100%;
-  max-width: 1150px;
-  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -241,12 +234,7 @@ main {
 
 /* ================= CONTENT ================= */
 .content {
-    max-width: 1000px; /* Batasi lebar maksimal agar tidak melebar di layar besar */
-    margin: 0 auto;    /* Membuat konten otomatis berada di tengah secara horizontal */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Memastikan isi di dalamnya (seperti banner kucing) juga di tengah */
+  margin-top: 20px;
 }
 
 /* ================= CARD ================= */
@@ -276,9 +264,7 @@ main {
 }
 
 .card.big {
-  width: 100%;
-  max-width: 1150px;
-  box-sizing: border-box;
+  padding: 18px;
 }
 
 /* efek glow neon */
@@ -316,9 +302,9 @@ main {
 /* ================= GRID ================= */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  align-items: stretch;
 }
 
 .content {
