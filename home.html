@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+  <aside>
+    <h2 class="logo">Kelar-In</h2>
+
+    <nav>
+      <button class="nav-btn active" onclick="setActive(this); showHome()">🏠 Home</button>
+      <button class="nav-btn" onclick="setActive(this); showDashboard()">📊 Dashboard</button>
+      <button class="nav-btn" onclick="setActive(this); showTasks()">📋 Tugas</button>
+      <button class="nav-btn" onclick="setActive(this); showAdd()">➕ Tambah</button>
+    </nav>
+
+    <div class="bottom">
+      <button class="logout" onclick="logout()">🚪 Logout</button>
+    </div>
+  </aside>
+
+  <main>
+
+    <div class="topbar">
+      <h1 id="pageTitle">Home</h1>
+      <div class="user" id="userName">👋 Hi, User</div>
+    </div>
+
+    <div class="content"></div>
+
+  </main>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+
+<body class="home"></body>
+</html>

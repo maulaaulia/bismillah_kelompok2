@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Kelar-In App</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="app">
+
+    <aside>
+  <h2 class="logo">Kelar-In</h2>
+
+  <nav>
+    <button class="nav-btn active" onclick="setActive(this); showHome()">
+      <img src="icon/home.png" class="nav-icon"> Home
+    </button>
+
+    <button class="nav-btn" onclick="setActive(this); showDashboard()">
+      <img src="icon/dashboard.png" class="nav-icon"> Dashboard
+    </button>
+
+    <button class="nav-btn" onclick="setActive(this); showTasks()">
+      <img src="icon/task.png" class="nav-icon"> Tugas
+    </button>
+
+    <button class="nav-btn" onclick="setActive(this); showAdd()">
+      <img src="icon/tambah.png" class="nav-icon"> Tambah
+    </button>
+
+    <button class="nav-btn" onclick="setActive(this); showCalendar()">
+      <img src="icon/calendar.png" class="nav-icon"> Kalender
+    </button>
+  </nav>
+
+  <div class="bottom">
+    <button class="logout" onclick="logout()">
+      <img src="icon/logout.png" class="nav-icon"> Logout
+    </button>
+    </div>
+</aside>
+
+    <main>
+
+      <div class="topbar">
+        <h1 id="pageTitle">Dashboard</h1>
+        <div class="user" id="userName">👋 Hi, User</div>
+      </div>
+
+      <div class="content"></div>
+
+    </main>
+
+  </div>
+
+  <script src="main.js"></script>
+
+  <!-- MODAL POPUP -->
+<div id="popupModal" class="modal">
+  <div class="modal-content">
+    <h3 id="popupText"></h3>
+    <p id="popupDesc"></p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
