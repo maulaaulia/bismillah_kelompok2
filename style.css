@@ -210,11 +210,18 @@ nav {
 /* ================= MAIN ================= */
 main {
   flex: 1;
-  padding: 25px;
+  margin-left: 280px; /* Ditambah dikit biar ada gap dari sidebar */
+  padding: 40px 5% 60px 5%; /* Menggunakan % agar fleksibel di layar tanggung */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ================= TOPBAR ================= */
 .topbar {
+  width: 100%;
+  max-width: 1150px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -234,7 +241,8 @@ main {
 
 /* ================= CONTENT ================= */
 .content {
-  margin-top: 20px;
+  width: 100%;
+  max-width: 1150px;
 }
 
 /* ================= CARD ================= */
@@ -264,7 +272,9 @@ main {
 }
 
 .card.big {
-  padding: 18px;
+  width: 100%;
+  max-width: 1150px;
+  box-sizing: border-box;
 }
 
 /* efek glow neon */
@@ -302,9 +312,9 @@ main {
 /* ================= GRID ================= */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  align-items: stretch;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  width: 100%;
 }
 
 .content {
