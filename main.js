@@ -55,9 +55,7 @@ function showHome() {
   const lastTask = kelarIn.length > 0 ? kelarIn[kelarIn.length - 1] : null;
 
   content.innerHTML = `
-   <div class="card big" style="max-width: 800px; margin: 0 auto; text-align: center;">
-      <!-- Isi konten -->
-    </div>
+    <div class="card big" style="text-align: center; padding: 40px 20px;">
       <img src="img/logo.png" style="width: 200px; margin-bottom: 20px;">
       <h2 style="color: #444;">Selamat Datang Kembali! ✨</h2>
       <p style="color: #777; margin-bottom: 30px;">Siap untuk menyelesaikan tugasmu hari ini dengan sistem LIFO?</p>
